@@ -68,7 +68,7 @@ function Home() {
         return data
     }
 
-    const submitUser = (e) => {
+    const submitUser = async (e) => {
         e.preventDefault()
         if((state.name && state.email && state.address) === '' ) {
             toastError("Please Fill All Field")
@@ -76,7 +76,6 @@ function Home() {
             dispatch(createUser({
                 ...state
             }))
-            navigate("/userList");
             toastSuccess("User Add SuccessFully")
         }
     }
