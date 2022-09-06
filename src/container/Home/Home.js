@@ -77,6 +77,7 @@ function Home() {
                 ...state
             }))
             toastSuccess("User Add SuccessFully")
+            navigate("./userList")
         }
     }
 
